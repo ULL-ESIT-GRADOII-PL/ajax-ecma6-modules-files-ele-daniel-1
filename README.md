@@ -1,4 +1,12 @@
 # Práctica 2: Comma separated values (CSV) with AJAX
+ 
+## Que se pide
+- Poder cargar ejemplos
+- Hacer una zona de drag and drop
+- Se debe enviar los datos al server y recuperarlos desde la pagina
+- Vista son ficheros que cambian en tiempo de ejecucion
+- y Public los estaticos solo
+
 
 ## jQuery.get( url [, data ] [, success ] [, dataType ] )
 * url
