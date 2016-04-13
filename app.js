@@ -1,9 +1,9 @@
 "use esversion: 6";
 
-const express = require('express');
-const app = express();
-const path = require('path');
-const expressLayouts = require('express-ejs-layouts');
+express = require('express');
+app = express();
+path = require('path');
+expressLayouts = require('express-ejs-layouts');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -13,7 +13,7 @@ app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
 
-const calculate = require('./models/calculate');
+calculate = require('./models/calculate');
 
 app.get('/', (request, response) => {
 	response.render('index', {title: 'CSV Analizer'});
