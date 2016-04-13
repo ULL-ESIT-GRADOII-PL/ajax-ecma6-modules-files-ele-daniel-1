@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 const calculate = require('./models/calculate');
 
 app.get('/', (request, response) => {
-	response.render('index', {title: 'CSV Analizer'};
+	response.render('index', {title: 'CSV Analizer'});
 });
 
 app.get('/csv', (request, response) => { //
