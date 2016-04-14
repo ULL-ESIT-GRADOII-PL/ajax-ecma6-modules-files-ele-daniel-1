@@ -1,11 +1,7 @@
 # Práctica 2: Comma separated values (CSV) with AJAX
- 
-## Que se pide
-- Poder cargar ejemplos
-- Hacer una zona de drag and drop
-- Se debe enviar los datos al server y recuperarlos desde la pagina
-- Vista son ficheros que cambian en tiempo de ejecucion
-- y Public los estaticos solo
+
+# Heroku
+https://ele-dani-csv-analizer2.herokuapp.com
 
 
 ## jQuery.get( url [, data ] [, success ] [, dataType ] )
@@ -42,7 +38,4 @@ $.ajax({
 ```
 
 The success callback function is passed the returned data, which will be an XML root element, text string, JavaScript file, or JSON object, depending on the MIME type of the response. It is also passed the text status of the response.
-
-# Heroku
-https://ele-dani-csv-analizer2.herokuapp.com
 
