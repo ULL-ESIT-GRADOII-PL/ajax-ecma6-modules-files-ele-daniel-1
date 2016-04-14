@@ -1,6 +1,6 @@
-"use esversion: 6"; // Use ECMAScript 6 mode in browsers that support it
 // See http://en.wikipedia.org/wiki/Comma-separated_values
 (() => {
+"use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 
 const resultTemplate = `
 <div class="contenido">
@@ -25,11 +25,11 @@ const fillTable = (data) => {
 /* Volcar en la textarea de entrada 
  * #original el contenido del fichero fileName */
 const dump = (fileName) => {
-	$.get(fileName, (data) => {
-		$('original').val(data);
-	});
+  $.get(fileName, function (data) {
+      $("#original").val(data);
+  });
 };
-
+ 
 const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
@@ -71,20 +71,18 @@ $(document).ready(() => {
     if (window.localStorage && localStorage.original) {
       original.value = localStorage.original;
     }
-
-    /* Request AJAX para que se calcule la tabla */
-	$("#parse").click(() => {
-					 if (window.localStorage) localStorage.original = original.value);
-					 $.get("/csv"),
-					 {input: original.value},
-					 fillTable,
-					 'json'
-				 );
-	});
+    $("#parse").click( () => {
+        if (window.localStorage) localStorage.original = original.value;
+        $.get("/csv", /* Request AJAX para que se calcule la tabla */
+          { input: original.value }, 
+          fillTable,
+          'json'
+        );
+   });
    /* botones para rellenar el textarea */
-   $('button-example').each(_,y) => {
-	$(y).click(() => { dump(`${$(y).text()}.txt`) });
-   }
+   $('button.example').each( (_,y) => {
+     $(y).click( () => { dump(`${$(y).text()}.txt`); });
+   });
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
@@ -95,3 +93,4 @@ $(document).ready(() => {
     inputFile.addEventListener('change', handleFileSelect, false);
  });
 })();
+
