@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/EleDiaz/csv-pract-2"
   },
   "keywords": [
     "csv"
   ],
-  "author": XXXXXXXXXX
+  "author": "EleAndDani",
   "contributors": [],
   "license": "ISC",
   "bugs": {
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/EleDiaz/csv-pract-2/issues"
   },
-  "homepage": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  "homepage": "https://github.com/EleDiaz/csv-pract-2",
   "dependencies": {
 	"jquery": "*",
     "underscore": "*",
@@ -29,7 +29,7 @@
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node": XXXXX
+    "node": "4.4.3"
   },
   "devDependencies": {
   }

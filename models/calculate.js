@@ -1,8 +1,8 @@
 (() => {
 "use strict";
 
-const regexp = /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/g;
-const calculate = (original) => {
+const regexp = /((?:[^"\\]\\.)*)"|([^,\s]+)|,\s*(?=,|$)|^\s*,/g
+let calculate = (original) => {
     let lines = original.split(/\n+\s*/);
     let commonLength = lines[0].match(regexp).length;
     let r = [];
@@ -35,5 +35,5 @@ const calculate = (original) => {
     return r;
   };
 
-module.exports = XXXXXXXXXX
+module.exports = calculate;
 })();
